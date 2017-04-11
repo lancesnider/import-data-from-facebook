@@ -1,5 +1,6 @@
-export const clickImport = () => {
+export const recieveFBData = (fbData) => {
   return {
-    type: 'CLICK_IMPORT'
+    type: 'RECIEVE_FACEBOOK_DATA',
+    fbData: fbData
   }
 }

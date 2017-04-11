@@ -1,13 +1,13 @@
 
-const defaultFacebookData = {
-  name: 'Nada'
-}
+const defaultFacebookData = {}
 
 export default function (state = defaultFacebookData, action = -1) {
   switch (action.type) {
-    case 'CLICK_IMPORT':
-      console.log('CLICK_IMPORT')
-      return state
+
+    case 'RECIEVE_FACEBOOK_DATA':
+      return Object.assign({}, state, {
+        ...action.fbData
+      })
 
     default:
       return state
