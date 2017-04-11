@@ -1,5 +1,6 @@
-
-import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { clickImport } from '../actions/index'
 import FacebookDataImportForm from '../components/FacebookDataImportForm'
 
 function mapStateToProps (state) {
@@ -8,4 +9,10 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps)(FacebookDataImportForm)
+function matchDispatchToProps (dispatch) {
+  return bindActionCreators({
+    clickImport: clickImport
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(FacebookDataImportForm)
