@@ -5,9 +5,7 @@ class FacebookDataImportForm extends Component {
     return (
       <div>
         <p>Import your data from your Facebook page</p>
-        <button
-          onMouseDown={() => this.props.clickImport()}
-        >Import</button>
+        <button onMouseDown={() => this.props.clickLogin()}>Log Into Facebook</button>
       </div>
     )
   }

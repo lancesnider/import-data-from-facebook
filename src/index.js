@@ -6,16 +6,7 @@ import allReducers from './reducers'
 import App from './components/App'
 import './index.css'
 
-const initialState = {
-  facebookData: {
-    name: 'Nada',
-    email: 'nadie@example.com',
-    phone: '',
-    address: '1234 My St., SLC, UT'
-  }
-}
-
-const store = createStore(allReducers, initialState)
+const store = createStore(allReducers)
 
 ReactDOM.render(
   <Provider store={store}>
