@@ -6,8 +6,6 @@ class DataFromFacebook extends Component {
       <ul>
         <li>Name: {this.props.facebookData.name}</li>
         <li>Email: {this.props.facebookData.email}</li>
-        <li>Phone: {this.props.facebookData.phone}</li>
-        <li>Address: {this.props.facebookData.address}</li>
       </ul>
     )
   }
